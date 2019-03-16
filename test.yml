@@ -1,0 +1,11 @@
+- name: template
+  hosts: host
+  gather_facts: no
+  roles:
+   - first-role
+   - { role: second-role, when: not var }
+
+  tasks:
+  - name: task
+    shell: echo aa
+

@@ -1,0 +1,8 @@
+- name: 定时任务使用demo
+  cron:
+   name: cron
+   job: "xxxxxxxxxxxxxx"
+   minute: '*/5'
+#absent  关闭
+#present 开启
+   state: absent

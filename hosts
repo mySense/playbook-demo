@@ -1,0 +1,13 @@
+[hosts:children]
+host
+
+[host]
+127.0.0.1
+
+[host:vars]
+
+[all:vars]
+
+[hosts:vars]
+
+

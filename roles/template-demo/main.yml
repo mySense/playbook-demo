@@ -1,0 +1,6 @@
+- name: template使用
+  template:
+#模板名称
+   src: "template.j2"
+#生成文件目录和名称
+   dist: '/tmp/aa.conf'

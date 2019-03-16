@@ -1,0 +1,8 @@
+- name: sync demo
+  synchronize:
+   mode: pull
+   src:  /data/aa
+   dest: /tmp/
+   delete: yes
+   rsync_opts: --exclude=export
+  delete_to: 127.0.0.1

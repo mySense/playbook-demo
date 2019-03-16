@@ -1,0 +1,14 @@
+- name: 检查grafana服务进程
+  shell: ps -ef|grep '{{ proc_name }}'|grep -v grep|wc -l
+#当改变状态时不显示
+  changed_when: false
+#注册变量
+  register: ps_result
+
+- name: 输出grafana服务进程信息
+  debug:
+   msg: "{{ ps_result.stdout }}"
+
+- name: 定义grafana_process变量  可传递
+  set_fact:
+   grafana_process: '{{ ps_result.stdout|int != 0 }}'
